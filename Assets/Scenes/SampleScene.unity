@@ -5907,7 +5907,7 @@ MonoBehaviour:
   steerSpeed: 150
   moveSpeed: 10
   slowSpeed: 5
-  boostSpeed: 40
+  boostSpeed: 25
 --- !u!212 &383447848
 SpriteRenderer:
   m_ObjectHideFlags: 0
