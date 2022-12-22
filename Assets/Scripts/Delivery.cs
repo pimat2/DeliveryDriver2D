@@ -10,6 +10,7 @@ public class Delivery : MonoBehaviour
     [SerializeField] Color32 noPackageColor = new Color32(1,0,0,255);
     bool hasPackage;
     SpriteRenderer spriteRenderer;
+    public GameObject FunctionObject;
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -29,6 +30,8 @@ public class Delivery : MonoBehaviour
             Debug.Log("Package Delivered");
             hasPackage = false;
             spriteRenderer.color = noPackageColor;
+            FunctionObject.GetComponent<SpawnPackages>().hasInstantiated=false;
+            FunctionObject.GetComponent<SpawnPackages>().InstantiatePackage();
         }
         
    }

@@ -8,7 +8,7 @@ public class SpawnPackages : MonoBehaviour
     public GameObject Package;
     public GameObject Node;
     public GameObject[] Nodes;
-    private bool hasInstantiated = false;
+    public bool hasInstantiated = false;
     void Start()
     {
        Nodes = GameObject.FindGameObjectsWithTag("Node"); 
