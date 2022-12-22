@@ -12,6 +12,10 @@ public class Delivery : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public GameObject FunctionObject;
     public GameObject CustomerObject;
+    public GameObject TimerObject;
+    public GameObject ScoreObject;
+    public float timeAdded;
+    public float scoreAdded;
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -33,6 +37,8 @@ public class Delivery : MonoBehaviour
             hasPackage = false;
             Destroy(other.gameObject, 0.5f);
             spriteRenderer.color = noPackageColor;
+            TimerObject.GetComponent<Timer>().currentTime += timeAdded;
+            ScoreObject.GetComponent<Score>().currentScore += scoreAdded;
             FunctionObject.GetComponent<SpawnPackages>().hasInstantiated=false;
             CustomerObject.GetComponent<SpawnCustomers>().hasCustomer = false;
             FunctionObject.GetComponent<SpawnPackages>().InstantiatePackage();

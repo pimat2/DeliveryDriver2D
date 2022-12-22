@@ -11,6 +11,7 @@ TagManager:
   - CustomerNode
   - Arrow
   - Triangle
+  - ScoreKeeper
   layers:
   - Default
   - TransparentFX

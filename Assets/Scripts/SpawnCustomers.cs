@@ -10,6 +10,7 @@ public class SpawnCustomers : MonoBehaviour
     public bool hasCustomer = false;
 
     public GameObject TargetIndicator;
+    
     void Start()
     {
        CustomerNodes = GameObject.FindGameObjectsWithTag("CustomerNode"); 

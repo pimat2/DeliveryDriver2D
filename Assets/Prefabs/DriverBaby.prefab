@@ -292,3 +292,7 @@ MonoBehaviour:
     rgba: 4280164078
   FunctionObject: {fileID: 0}
   CustomerObject: {fileID: 0}
+  TimerObject: {fileID: 0}
+  ScoreObject: {fileID: 0}
+  timeAdded: 10
+  scoreAdded: 10
