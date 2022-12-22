@@ -11,6 +11,7 @@ public class Delivery : MonoBehaviour
     bool hasPackage;
     SpriteRenderer spriteRenderer;
     public GameObject FunctionObject;
+    public GameObject CustomerObject;
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -24,13 +25,16 @@ public class Delivery : MonoBehaviour
             hasPackage = true;
             Destroy(other.gameObject, 0.5f);
             spriteRenderer.color = hasPackageColor;
+            CustomerObject.GetComponent<SpawnCustomers>().InstantiateCustomer();
             
         }
         if(other.tag == "Customer" && hasPackage == true){
             Debug.Log("Package Delivered");
             hasPackage = false;
+            Destroy(other.gameObject, 0.5f);
             spriteRenderer.color = noPackageColor;
             FunctionObject.GetComponent<SpawnPackages>().hasInstantiated=false;
+            CustomerObject.GetComponent<SpawnCustomers>().hasCustomer = false;
             FunctionObject.GetComponent<SpawnPackages>().InstantiatePackage();
         }
         

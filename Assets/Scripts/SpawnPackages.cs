@@ -19,7 +19,6 @@ public class SpawnPackages : MonoBehaviour
    {
          if(hasInstantiated == false){
             int randomIndex = Random.Range(0, Nodes.Length);
-            Debug.Log(randomIndex);
             GameObject Node = Nodes[randomIndex];
             Instantiate(Package,Node.transform.position, Quaternion.identity);
             hasInstantiated = true;
