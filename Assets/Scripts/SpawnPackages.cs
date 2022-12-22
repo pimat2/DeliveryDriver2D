@@ -26,6 +26,11 @@ public class SpawnPackages : MonoBehaviour
             TargetIndicator.GetComponent<TargetIndicator>().StartLookingForPackage();
         }
    }
+   private void Update() {
+      if(Input.GetKey("escape")){
+         Application.Quit();
+      }
+   }
     
 
 }
