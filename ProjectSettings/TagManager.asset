@@ -12,6 +12,7 @@ TagManager:
   - Arrow
   - Triangle
   - ScoreKeeper
+  - forDestruction
   layers:
   - Default
   - TransparentFX
