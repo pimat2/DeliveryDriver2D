@@ -2811,6 +2811,7 @@ MonoBehaviour:
   Node: {fileID: 62043693601208615, guid: e1a29620bc303e34686d4c8998d36698, type: 3}
   Nodes: []
   hasInstantiated: 0
+  TargetIndicator: {fileID: 260091027}
 --- !u!4 &149246815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958541024102124837, guid: e1a29620bc303e34686d4c8998d36698, type: 3}
@@ -5349,6 +5350,11 @@ PolygonCollider2D:
       - {x: -0.055, y: -1.05}
       - {x: -0.024999999, y: -1.02}
       - {x: 0.105, y: -0.83}
+--- !u!1 &260091027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4352056952317147267, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
+  m_PrefabInstance: {fileID: 9110576288651085096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &263561555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958541024102124837, guid: e1a29620bc303e34686d4c8998d36698, type: 3}
@@ -8857,6 +8863,7 @@ MonoBehaviour:
   CustomerNode: {fileID: 4275570546217189443, guid: b91f9e3818d5a0d4dae4ec449be9542b, type: 3}
   CustomerNodes: []
   hasCustomer: 0
+  TargetIndicator: {fileID: 260091027}
 --- !u!4 &507422531
 Transform:
   m_ObjectHideFlags: 0
@@ -30947,6 +30954,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a29620bc303e34686d4c8998d36698, type: 3}
+--- !u!1 &1739514003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739514006}
+  - component: {fileID: 1739514005}
+  - component: {fileID: 1739514004}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1739514004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739514003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1739514005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739514003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1739514006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739514003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747942660
 GameObject:
   m_ObjectHideFlags: 0
@@ -38458,6 +38533,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5264862757147009896, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965388264077264176, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549410946446692508, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1864420896}
+    - target: {fileID: 6549410946446692508, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
+      propertyPath: HideDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9110576288497661440, guid: 172f9b5ba9b53964d82bd6c4e75391c1, type: 3}
       propertyPath: m_SortingOrder
       value: 3

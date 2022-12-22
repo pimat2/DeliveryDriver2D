@@ -9,7 +9,8 @@ public class SpawnPackages : MonoBehaviour
     public GameObject Node;
     public GameObject[] Nodes;
     public bool hasInstantiated = false;
-    void Start()
+    public GameObject TargetIndicator;
+    void Awake()
     {
        Nodes = GameObject.FindGameObjectsWithTag("Node"); 
        InstantiatePackage();
@@ -22,6 +23,7 @@ public class SpawnPackages : MonoBehaviour
             GameObject Node = Nodes[randomIndex];
             Instantiate(Package,Node.transform.position, Quaternion.identity);
             hasInstantiated = true;
+            TargetIndicator.GetComponent<TargetIndicator>().StartLookingForPackage();
         }
    }
     
