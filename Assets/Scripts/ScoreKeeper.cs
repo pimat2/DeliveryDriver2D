@@ -8,6 +8,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     public TMP_Text scoreText;
     public GameObject ScoreObject;
+    
     // Start is called before the first frame update
     void Start()
     {

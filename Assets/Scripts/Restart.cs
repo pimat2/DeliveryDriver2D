@@ -6,6 +6,11 @@ public class Restart : MonoBehaviour
 {
    public void RestartGame()
    {
+     DestroyPersistentObject();
+     SceneManager.LoadScene("FirstLevel");
+   }
+   public void DestroyPersistentObject()
+   {
      GameObject[] packageNodes = GameObject.FindGameObjectsWithTag("Node");
      foreach(GameObject packageNode in packageNodes)
      GameObject.Destroy(packageNode);
@@ -20,7 +25,5 @@ public class Restart : MonoBehaviour
      GameObject[] destructables = GameObject.FindGameObjectsWithTag("forDestruction");
      foreach(GameObject destructable in destructables)
      GameObject.Destroy(destructable);
-     
-     SceneManager.LoadScene("ThirdLevel");
    }
 }
